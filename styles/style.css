@@ -16,8 +16,7 @@ html {
   background-color: #1b1919;
   inline-size: 1200px;
   block-size: 100%;
-  display: flex;
-  align-items: center;
+  padding: 133px 30px;
 }
 
 h1,
@@ -112,8 +111,8 @@ ol {
   cursor: pointer;
 }
 
-.search-form__label-hover:hover{
-  text-decoration: underline;
+.search-form__label:hover .search-form__label-text{
+  text-decoration: underline; 
   text-underline-position: under;
 }
 
@@ -148,11 +147,7 @@ ol {
   position: relative;
   height: 298px;
   overflow: scroll;
-  overflow-x: hidden;
-}
-
-.content__list::-webkit-scrollbar{
-  display: none;
+  overflow-x: auto;
 }
 
 .content__details{
@@ -188,6 +183,7 @@ ol {
 .content__video-card-thumbnail{
   width: 194px;
   height: 103px;
+  object-fit: cover;
 }
 
 .content__video-card-description-container{
@@ -195,11 +191,24 @@ ol {
   height: 100%;
 }
 
+.content__card-link_current{
+  background-color: #545050;
+}
+
 .content__card-link{
   display: block;
   margin: 2px;
   color: #FFFFFF;
   text-decoration: none;
+}
+
+.content__card-link:active{
+  background-color: #545050;
+}
+
+.content__card-link:hover{
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 .content__card-link:focus{
@@ -210,17 +219,8 @@ ol {
   outline: #FFFFFF solid 1px;
 }
 
-.content__list-item:active{
-  background-color: #545050;
-}
-
-.content__list-item:hover{
-  text-decoration: underline;
-  text-underline-position: under;
-}
-
 .content__video-card-title{
-  margin-bottom: 6px;
+  padding-bottom: 6px;
   overflow: hidden;
   color: #FFFFFF;
   font-family: 'Oswald', sans-serif;
