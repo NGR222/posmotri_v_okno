@@ -16,7 +16,9 @@ html {
   background-color: #1b1919;
   inline-size: 1200px;
   block-size: 100%;
-  padding: 133px 30px;
+  padding: 0px 30px;
+  display: flex;
+  align-items: center;
 }
 
 h1,
